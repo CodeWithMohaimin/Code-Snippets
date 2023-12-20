@@ -15,3 +15,19 @@ btns.forEach((btn) => {
 });
 
 ```
+
+## 2. When Scroll down & When scroll up
+
+```javascript
+
+function handleScroll(event) {
+  if (event.deltaY > 0) {
+    homeUpperContainer.classList.add("active");
+  } else if (event.deltaY < 0) {
+    homeUpperContainer.classList.remove("active");
+  }
+}
+
+homeContainer.addEventListener("wheel", handleScroll);
+
+```
