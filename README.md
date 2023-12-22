@@ -51,3 +51,16 @@ document.querySelectorAll('[data-testid="connect-without-message-button"]').forE
 
 
 ```
+
+## 4. Automatic Send Friend Request
+
+```javascript
+
+
+document.querySelectorAll('[aria-label="Add friend"]').forEach((item) => {
+  item.click();
+});
+
+
+
+```
