@@ -31,3 +31,23 @@ function handleScroll(event) {
 homeContainer.addEventListener("wheel", handleScroll);
 
 ```
+
+## 3. Automatic Send Connect from console
+
+```javascript
+
+
+
+document.querySelectorAll('[data-testid="connect-button"]').forEach((item) => {
+  item.click();
+
+document.querySelectorAll('[data-testid="connect-without-message-button"]').forEach((popupSendButton) => {
+  popupSendButton.click();
+
+  });
+});
+
+
+
+
+```
