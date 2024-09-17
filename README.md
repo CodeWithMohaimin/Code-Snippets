@@ -64,3 +64,20 @@ document.querySelectorAll('[aria-label="Add friend"]').forEach((item) => {
 
 
 ```
+
+## 5. Change Existing Git Repo To New
+
+```javascript
+
+
+git remote set-url origin https://github.com/CodeWithMohaimin/Wordpress.git
+
+git remote remove origin
+git remote add origin https://github.com/CodeWithMohaimin/Wordpress.git
+
+git push -u origin master
+
+
+
+
+```
