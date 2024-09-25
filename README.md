@@ -81,3 +81,41 @@ git push -u origin master
 
 
 ```
+
+## 6. Automatic Unfollow
+
+```javascript
+
+document.querySelectorAll('[aria-label="Manage"]').forEach((item, i) => {
+    setTimeout(() => {
+        item.click();
+        console.log(`Clicked Manage button for item ${i}`);
+
+        setTimeout(() => {
+            const unfriendButton = document.querySelector('img[src="https://static.xx.fbcdn.net/rsrc.php/v3/yw/r/Kluyv0pwyPt.png"]');
+            if (unfriendButton) {
+                unfriendButton.click();
+                console.log(`Clicked Unfriend for item ${i}`);
+
+                setTimeout(() => {
+                    const confirmButton = document.querySelector('[aria-label="Confirm"]');
+                    if (confirmButton) {
+                        confirmButton.click();
+                        console.log(`Confirmed Unfriend for item ${i}`);
+                    } else {
+                        console.log(`No confirm button found for item ${i}`);
+                    }
+                }, 1000);
+
+            } else {
+                console.log(`Unfriend button not found for item ${i}`);
+            }
+        }, 1000);
+
+    }, i * 3000);
+});
+
+
+
+
+```
